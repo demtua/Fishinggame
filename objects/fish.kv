@@ -1,0 +1,16 @@
+<Fish>:
+    size_hint: None, None
+    size: 64, 64
+
+    canvas.before:
+        PushMatrix
+        Rotate:
+            angle: self.rotation
+            origin: self.center
+    canvas:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: "assets/fish.png"
+    canvas.after:
+        PopMatrix
