@@ -1,10 +1,25 @@
 #:include objects/sea.kv
 
 <GameScreen>:
-    canvas:
-        Color:
-            rgba:1,1,1,1
-        Rectangle:
-            size:self.size
-            pos:self.pos
-    Sea:
+    # canvas:
+    #     Color:
+    #         rgba:1,1,1,1
+    #     Rectangle:
+    #         size:self.size
+    #         pos:self.pos
+    
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            # disabled: True
+            text: "Score: " + str(app.score)
+            color:1,0,0,1
+            size_hint:1,None
+            height:dp(40)
+        Sea:
+            size_hint:1,1
+        Button:
+            size_hint:1,None
+            height:dp(40)
+            text:'quit'
+            on_release:app.go_to_menu()

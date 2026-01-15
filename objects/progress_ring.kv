@@ -1,0 +1,9 @@
+<ProgressRing>:
+    Label:
+        text: str(root.level_text)
+        font_size: max(1, min(root.width, root.height) * root.text_scale)
+        color: root.text_color
+        center: root.center[0], root.center[1]#+self.height/128
+        size_hint: None, None
+
+    

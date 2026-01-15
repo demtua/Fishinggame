@@ -1,6 +1,21 @@
 #:include screens/gamescreen.kv
+#:include screens/menu.kv
 
 
 #:include objects/fish.kv
 #:include objects/rod.kv
 
+<FishingGame>:
+    canvas:
+        Color:
+            rgba:1,0,0,1
+
+        Rectangle:
+            size:root.width, 60
+            pos:10, root.height-60
+    Label:
+        text: "Score: " + str(app.score)
+        size_hint: None, None
+        color:1,0,0,1
+        size: 150, 40
+        pos: 10, root.height - 50
